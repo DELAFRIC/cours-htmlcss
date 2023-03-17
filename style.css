@@ -1,0 +1,408 @@
+h3,
+h4,
+strong,
+.ex,
+#example
+
+/*commentaitre  pour le css*/
+	{
+	color: blue;
+	/*les paragra^phe seront en bleur */
+
+}
+
+h1,
+#rouge,
+a[title] {
+	color: red;
+}
+
+
+p span {
+	color: orange;
+}
+
+
+
+div+span {
+	color: red;
+}
+
+a[title] {
+	color: red;
+}
+
+a[title="Infobulle"] {
+	color: orange;
+}
+
+a[title*="un"] {
+	color: green;
+}
+
+/* format de texte*/
+
+.pxl16 {
+	font-size: 16px;
+	/*un format de 16 pixel*/
+}
+
+.pxl40 {
+	font-size: 40px;
+	/*un format de 40pixel*/
+}
+
+#grand {
+	font-size: xx-large;
+}
+
+.em {
+	font-size: 2.5em;
+}
+
+
+/*format de txte la police*/
+
+.police1 {
+	font-family: FORTE;
+}
+
+.police2 {
+	font-family: godugi;
+}
+
+.police3 {
+	font-family: GIGI;
+}
+
+
+/*-----------------*/
+@font-face {}
+
+/*------------------*/
+
+/*italique gras souligne*/
+
+.ita {
+	font-style: italic;
+}
+
+.obli {
+	font-style: oblique;
+}
+
+.norm {
+	font-style: normal;
+}
+
+
+.gra {
+	font-weight: bold;
+}
+
+.souligne {
+	text-decoration: underline;
+}
+
+.barr {
+	text-decoration: line-through;
+}
+
+.desous {
+	text-decoration: overline;
+}
+
+/*pour aligner un texte*/
+
+.gh {
+	text-align: left;
+}
+
+
+.dr {
+	text-align: right;
+}
+
+.ct {
+	text-align: center;
+}
+
+
+.jst {
+	text-align: justify;
+}
+
+.flotter {
+	float: left;
+	/*ou right;*/
+}
+
+.flot,
+.dessous {
+	float: left;
+	clear: both;
+}
+
+/*Ajoutez de la couleur et un fond**************************************************************************************/
+#hexadécimale {
+	color: #5fad6c;
+}
+
+#rgb {
+	color: rgb(240, 96, 204);
+}
+
+/*Couleur de fond*/
+.couleurdefond {
+	background-color: bisque;
+}
+
+/*appiquer une image de fond*/
+.Appliqueruneimagefond {
+	background-image: url(nom-de-limage.png);
+	background-attachment: scroll;
+	/*fixe le fond de l'image*/
+}
+
+/*background-repeat  : répétition du fond*/
+********* {
+	background-image: url(im0.jpg);
+	background-repeat: repeat
+		/*ou X*/
+	;
+}
+
+/*La transparence avec opacity*/
+.trp {
+	background-color: black;
+	color: goldenrod;
+	font-style: italic;
+	opacity: 1;
+	/*cette parti gere la transparence*/
+}
+
+/*Créez des bordures et des ombres **************************************************************************************************************/
+/*Bordures standard*/
+#bordure {
+	border: 5px blue dotted;
+	/*permet de determiner la dordure avec les trois valeur*/
+	border-radius: 10px 15px 15px 10px;
+	/*pour arrondir es bordure*/
+	box-shadow: 10px 6px 5px blue;
+	/*pour les ombre de bloc*/
+	text-shadow: 2px 2px 4px black;
+	/*pour les ombres de textes*/
+}
+
+/*Créez des apparences dynamiques **************************************************************************************************************/
+/* au survol de la souri*/
+.sv:hover
+
+/*la fonctionqui permet est (balise:hover)*/
+	{
+	font-style: oblique;
+	font-size: 20px;
+	border: 3px red inset;
+	border-radius: 10px;
+	box-shadow: -5px -3px 6px red;
+}
+
+/*:active  : au moment du clic*/
+.clic:active {
+	background-color: black;
+}
+
+/*:focus  : lorsque l'élément est sélectionné*/
+.fc:focus {
+	color: red;
+	font-style: oblique;
+	font-size: 15 px;
+}
+
+/*:visited : Lorsque le lien a déjà été consulté*/
+.vs:visited {
+	background-color: yellow;
+}
+
+
+/*le modèle des boîtes **************************************************************************************************************/
+
+/*les dimension*/
+.dm {
+	width: 50%;
+	/*pour la largeur*/
+	height: 150px;
+	/*pour la hauteur*/
+	background-color: sandybrown;
+	box-shadow: 5px 4px 3px salmon;
+	border-radius: 10PX;
+}
+
+/* marges interieur et exterieur */
+.mg {
+	width: 350px;
+	border: 1px black solid;
+	text-align: justify;
+	padding: 10px;
+	/*marge interieur*/
+	margin: 20px;
+	/*marge exterieur utilise aussi pour centré avec la proprieté (auto) */
+}
+
+/*overflow  : couper un bloc*/
+.cb {
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid black;
+	margin-right: 20px;
+	/*decalage externe droit*/
+	overflow: auto;
+	/*pour coupe le bloque*/
+}
+
+/*Faites votre mise en page avec Flexbox ***************************************************************************************/
+
+/*decouvrons flexbox*/
+#conteneur {
+	border: 2px black inset;
+	width: 300px;
+	height: 200px;
+	display: flex;
+	/*permet d'aligneur les element*/
+}
+
+/*dimention*/
+#conteneur1 {
+	border: 2px black inset;
+	width: 300px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	/* valeur: column , row,  column-reverse,row-reverse*/
+}
+
+/* retoure a la ligne*/
+#conteneur2 {
+	border: 2px black inset;
+	width: 150px;
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	/*permet le retoure a la ligne en cas de manquement de place*/
+}
+
+/*Alignez-les !*/
+/*Aligner sur l'axe principal*/
+#conteneur3 {
+	border: 2px black inset;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	/*choisir l'alignement des elements*/
+}
+
+/*Aligner sur l'axe secondaire*/
+#conteneur4 {
+	border: 2px black inset;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*alignement sur laxe secondaire*/
+}
+
+/* Aligner un seul élément*/
+#conteneur5 {
+	border: 2px black inset;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*align-self suivit des valeur*/
+}
+
+/*Répartir plusieurs lignes*/
+#conteneur6 {
+	border: 2px black inset;
+	width: 275px;
+	height: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	/*au cas ou les element sont nombreus*/
+}
+
+/* autre format du texte *************************************************************************************************/
+
+/*Le positionnement flottant*/
+.ex1 {
+	float: left;
+	border: 1px black solid;
+}
+
+.ex2 {
+	border: 1px black solid;
+	width: 350px;
+	margin-left: 100px;
+}
+
+/* positionnement inline-block*/
+.ex3 {
+	border: 1px black solid;
+	display: inline-block;
+	/*permet au element de se positionné l'un a coté des autre*/
+	vertical-align: top;
+	/*positionnement*/
+}
+
+.ex4 {
+	/*permet au element de se positionné l'un a coté des autre*/
+	display: inline-block;
+	border: 1px blue solid;
+	vertical-align: top;
+	/*positionnement*/
+}
+
+/* Les positionnements absolu, fixe et relatif*/
+/*positionement absolut*/
+.ex5 {
+	border: 1px black solid;
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	right: 300px;
+	/*top: 50px;*/
+	/*positionnement absolu*/
+
+}
+
+.ex6 {
+	display: inline-block;
+	border: 1px blue solid;
+	vertical-align: top;
+}
+
+/*position relatif*/
+.rela {
+	text-shadow: red;
+	background-color: blueviolet;
+	position: relative;
+	bottom: 20PX;
+	left: 50Px;
+}
+
+/*Ajoutez des tableaux******************************************************************************************/
+
+td,
+th {
+	border: 1px black solid;
+}
+
+table {
+	border-collapse: collapse;
+}
